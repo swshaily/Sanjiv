@@ -5,23 +5,23 @@
     <title>Redirecting...</title>
 </head>
 <body>
-    <p>Opening WhatsApp... If it doesn’t open, <a href="whatsapp://send?phone=919699763300&text=Check%20out%20this%20document:%20https%3A%2F%2Fswshaily.github.io%2FSanjiv%2FForm_6_English.pdf">click here</a>.</p>
+    <p>Opening WhatsApp... If it doesn’t open, <a href="whatsapp://send?phone=919699763300&text=Check%20out%20this%20document:%20https://swshaily.github.io/Sanjiv/Form_6_English.pdf">click here</a>.</p>
 
     <script>
-        // Open WhatsApp contact with pre-filled text
+        // Open WhatsApp contact with a pre-filled message
         setTimeout(() => {
-            window.location.href = 'whatsapp://send?phone=919699763300&text=Check%20out%20this%20document:%20https%3A%2F%2Fswshaily.github.io%2FSanjiv%2FForm_6_English.pdf';
-
-            // Auto-download PDF after opening WhatsApp
-            setTimeout(() => {
-                const link = document.createElement('a');
-                link.href = 'https://swshaily.github.io/Sanjiv/Form_6_English.pdf'; // Direct link to your PDF
-                link.download = 'Form_6_English.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link); // Clean up
-            }, 2000); // Adjust time if needed
+            window.location.href = 'whatsapp://send?phone=919699763300&text=Check%20out%20this%20document:%20https://swshaily.github.io/Sanjiv/Form_6_English.pdf';
         }, 500);
+
+        // Trigger PDF download separately (bypasses popup blocking)
+        setTimeout(() => {
+            const link = document.createElement('a');
+            link.href = 'https://swshaily.github.io/Sanjiv/Form_6_English.pdf';
+            link.download = 'Form_6_English.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }, 1500); // Added delay to prevent conflicts
     </script>
 </body>
 </html>
