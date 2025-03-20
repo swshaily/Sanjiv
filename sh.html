@@ -15,9 +15,17 @@
             link.click();
 
         // Download PDF after opening WhatsApp
+        //setTimeout(() => {
+        //    window.location.href = 'https://swshaily.github.io/Sanjiv/Form_6_English.pdf'; // Your GitHub PDF link
+        //}, 3000); // Adjust time if needed
         setTimeout(() => {
-            window.location.href = 'https://swshaily.github.io/Sanjiv/Form_6_English.pdf'; // Your GitHub PDF link
-        }, 3000); // Adjust time if needed
+                const link = document.createElement('a');
+                link.href = 'https://swshaily.github.io/Sanjiv/Form_6_English.pdf'; // Direct link to your PDF
+                link.download = 'document.pdf'; // Name of the downloaded file
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link); // Clean up
+            }, 3000);
     </script>
 </body>
 </html>
