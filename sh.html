@@ -9,12 +9,15 @@
     
     <script>
         // Open WhatsApp App directly
-        window.location.href = 'whatsapp://send?phone=919699763300';
+        //window.location.href = 'whatsapp://send?phone=919699763300';
+        const link = document.createElement('a');
+            link.href = 'whatsapp://send?phone=919699763300';
+            link.click();
 
         // Download PDF after opening WhatsApp
         setTimeout(() => {
             window.location.href = 'https://swshaily.github.io/Sanjiv/Form_6_English.pdf'; // Your GitHub PDF link
-        }, 1000); // Adjust time if needed
+        }, 3000); // Adjust time if needed
     </script>
 </body>
 </html>
